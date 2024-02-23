@@ -8,3 +8,15 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/monitoring?serverTimezone=Asia/Seoul
     username: root
     password: 1234Abc@
+    
+  jpa:
+    database: mysql
+    show-sql: true # Jpa 수행 시 SQL문 로그 출력
+    properties:
+      hibernate:
+        format_sql: true # 쿼리 출력시 포맷 정렬되도록 설정
+        
+jwt:
+  header: Authorization
+  #HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용해야 한다.
+  secret: a2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbXRva2FyaW10b2thcmltdG9rYXJpbQ==
